@@ -1,8 +1,11 @@
 'use strict';
 
 function grouping_count(collection) {
+    return collection.reduce((prev, next) => {
+      prev[`${next}`] = prev[`${next}`] + 1 || 1;
+      return prev;
+    }, {});
 
-  //implement here
 }
 
 module.exports = grouping_count;
